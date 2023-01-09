@@ -1,0 +1,23 @@
+{%load static%}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="{% static 'style/index.css' %}">
+    <title>django site kiwi</title>
+</head>
+<nav>
+    <h1 class="title-nav"> Kiwi Tricote </h1>
+</nav>
+<br>
+    <h1> les articles</h1>
+    {% for article in articles%}
+    <h2>{{article.title}}</h2>
+    <p>{{article.text}}</p> 
+    <br></br>
+    <br></br>
+    {%endfor%}
+</body>
+</html>

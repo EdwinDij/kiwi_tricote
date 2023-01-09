@@ -15,7 +15,8 @@ Including another URLconf
 """
 from django.contrib import admin
 from django.urls import path
-
+from kiwi_tricote import views
 urlpatterns = [
-    path('admin/', admin.site.urls),
+    path('adminjdpabmqnft/', admin.site.urls),
+    path('pat/', views.index, name='index'),
 ]
