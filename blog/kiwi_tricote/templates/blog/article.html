@@ -1,0 +1,10 @@
+{% extends 'base.html' %}
+
+
+{% block content %}
+
+<img src="{{ articles.image.url }}" alt={{ articles.title }}>
+<h2>{{ articles.title }}</h2>
+<h3> {{ articles.text }}</h3>
+
+{% endblock %}
