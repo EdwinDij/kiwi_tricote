@@ -16,7 +16,12 @@ Including another URLconf
 from django.contrib import admin
 from django.urls import path
 from kiwi_tricote import views
+from django.conf.urls.static import static
+
+from .settings import MEDIA_URL, MEDIA_ROOT
+
 urlpatterns = [
+    path('', views.index),
     path('adminjdpabmqnft/', admin.site.urls),
-    path('pat/', views.index, name='index'),
-]
+       
+] + static(MEDIA_URL, document_root = MEDIA_ROOT )
