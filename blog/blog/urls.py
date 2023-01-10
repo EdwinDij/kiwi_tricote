@@ -15,14 +15,17 @@ Including another URLconf
 """
 from django.contrib import admin
 from django.urls import path
-from kiwi_tricote import views
+from kiwi_tricote.views import index ,one_article
+from accounts.views import signup, logout_user
 from django.conf.urls.static import static
 
 from .settings import MEDIA_URL, MEDIA_ROOT
 
 urlpatterns = [
-    path('', views.index, name='index'),
-    path('article/<str:slug>/', views.one_article, name='article'),
+    path('', index, name='index'),
+    path('article/<str:slug>/', one_article, name='article'),
+    path('signup/', signup, name='signup'),
+    path('logout/', logout_user, name='logout'),
     path('adminjdpabmqnft/', admin.site.urls),
        
 ] + static(MEDIA_URL, document_root = MEDIA_ROOT )
