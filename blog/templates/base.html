@@ -18,6 +18,7 @@
     {{user.username}}
     <a href="{% url 'logout' %}">Déconnexion</a>
 {% else %}
+    <a href="{% url 'login' %}">Se connecter</a>
     <a href="{% url 'signup' %}">S'inscrire</a>
 {% endif %}
 
